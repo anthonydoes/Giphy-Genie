@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+    background-color: #252525;
+    color: #f8f8ff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding-top: 5vh;
+    padding: 5vh 3vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .top,
+  .middle,
+  .indicators {
+    text-align: center;
+    position: relative;
+  }
+  
+  .genie img {
+    filter: invert(90%);
+    height: 80px;
+  }
+  
+  input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #f8f8ff;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .search-input {
+    font-size: 72px;
+  }
+  
+  .search-input::placeholder {
+    color: #484848;
+  }
+  
+  .search-clear,
+  .spinner {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  
+  .search-clear {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .title {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .videos,
+  .middle,
+  .grid {
+    display: grid;
+    place-items: center;
+  }
+  
+  .video {
+  /*  this tells each child video to take up full width and height of our grid  */
+    grid-area: 1/1;
+    max-width: 500px;
+    max-height: 500px ;
+    display: block;
+  }
+  
+  .search-input,
+  .videos,
+  .full-area {
+    grid-area: 1/1;
+  }
+  
+  .search-hint,
+  .spinner {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .show-hint .search-hint,
+  .loading .spinner {
+    opacity: 1;
+  }
+  
+  .loading .search-hint {
+    opacity: 0;
+  }
+  
+  .show-hint .search-hint,
+  .loading .spinner,
+  .has-results .search-clear,
+  .title {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+  .loading .search-hint,
+  .has-results .title {
+    opacity: 0;
+  }
+  
+  /* responsive styles */
+  
+  .video {
+    width: 100%;
+  }
+  
+  .videos {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  .search-input {
+    width: 94vw;
+    line-height: 1;
+    height: 88px;
+  }
+  
+  @media (max-width: 480px) {
+    
+    body {
+      font-size: 18px;
+    }
+    
+    .search-input {
+      font-size: 32px;
+    }
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
